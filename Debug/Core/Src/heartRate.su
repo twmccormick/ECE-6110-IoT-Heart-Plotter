@@ -1,0 +1,4 @@
+heartRate.cpp:81:6:bool checkForBeat(int32_t)	24	static
+heartRate.cpp:139:9:int16_t averageDCEstimator(int32_t*, uint16_t)	16	static
+heartRate.cpp:146:9:int16_t lowPassFIRFilter(int16_t)	24	static
+heartRate.cpp:164:9:int32_t mul16(int16_t, int16_t)	16	static

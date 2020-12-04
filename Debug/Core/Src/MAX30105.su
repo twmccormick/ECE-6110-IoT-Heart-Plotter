@@ -1,0 +1,56 @@
+MAX30105.cpp:140:1:MAX30105::MAX30105()	16	static
+MAX30105.cpp:144:6:bool MAX30105::begin(I2C_HandleTypeDef*, uint8_t)	24	static
+MAX30105.cpp:173:9:uint8_t MAX30105::getINT1()	16	static
+MAX30105.cpp:176:9:uint8_t MAX30105::getINT2()	16	static
+MAX30105.cpp:180:6:void MAX30105::enableAFULL()	16	static
+MAX30105.cpp:183:6:void MAX30105::disableAFULL()	16	static
+MAX30105.cpp:187:6:void MAX30105::enableDATARDY()	16	static
+MAX30105.cpp:190:6:void MAX30105::disableDATARDY()	16	static
+MAX30105.cpp:194:6:void MAX30105::enableALCOVF()	16	static
+MAX30105.cpp:197:6:void MAX30105::disableALCOVF()	16	static
+MAX30105.cpp:201:6:void MAX30105::enablePROXINT()	16	static
+MAX30105.cpp:204:6:void MAX30105::disablePROXINT()	16	static
+MAX30105.cpp:208:6:void MAX30105::enableDIETEMPRDY()	16	static
+MAX30105.cpp:211:6:void MAX30105::disableDIETEMPRDY()	16	static
+MAX30105.cpp:217:6:void MAX30105::softReset()	24	static
+MAX30105.cpp:231:6:void MAX30105::shutDown()	16	static
+MAX30105.cpp:238:6:void MAX30105::wakeUp()	16	static
+MAX30105.cpp:243:6:void MAX30105::setLEDMode(uint8_t)	16	static
+MAX30105.cpp:249:6:void MAX30105::setADCRange(uint8_t)	16	static
+MAX30105.cpp:254:6:void MAX30105::setSampleRate(uint8_t)	16	static
+MAX30105.cpp:259:6:void MAX30105::setPulseWidth(uint8_t)	16	static
+MAX30105.cpp:266:6:void MAX30105::setPulseAmplitudeRed(uint8_t)	16	static
+MAX30105.cpp:270:6:void MAX30105::setPulseAmplitudeIR(uint8_t)	16	static
+MAX30105.cpp:274:6:void MAX30105::setPulseAmplitudeGreen(uint8_t)	16	static
+MAX30105.cpp:278:6:void MAX30105::setPulseAmplitudeProximity(uint8_t)	16	static
+MAX30105.cpp:282:6:void MAX30105::setProximityThreshold(uint8_t)	16	static
+MAX30105.cpp:293:6:void MAX30105::enableSlot(uint8_t, uint8_t)	16	static
+MAX30105.cpp:317:6:void MAX30105::disableSlots()	16	static
+MAX30105.cpp:327:6:void MAX30105::setFIFOAverage(uint8_t)	16	static
+MAX30105.cpp:333:6:void MAX30105::clearFIFO()	16	static
+MAX30105.cpp:340:6:void MAX30105::enableFIFORollover()	16	static
+MAX30105.cpp:345:6:void MAX30105::disableFIFORollover()	16	static
+MAX30105.cpp:352:6:void MAX30105::setFIFOAlmostFull(uint8_t)	16	static
+MAX30105.cpp:357:9:uint8_t MAX30105::getWritePointer()	16	static
+MAX30105.cpp:362:9:uint8_t MAX30105::getReadPointer()	16	static
+MAX30105.cpp:368:6:void MAX30105::setPROXINTTHRESH(uint8_t)	16	static
+MAX30105.cpp:376:9:uint8_t MAX30105::readPartID()	16	static
+MAX30105.cpp:380:6:void MAX30105::readRevisionID()	16	static
+MAX30105.cpp:384:9:uint8_t MAX30105::getRevisionID()	16	static
+MAX30105.cpp:396:6:void MAX30105::setup(uint8_t, uint8_t, uint8_t, int, int, int)	16	static
+MAX30105.cpp:482:9:uint8_t MAX30105::available()	24	static
+MAX30105.cpp:491:10:uint32_t MAX30105::getRed()	16	static
+MAX30105.cpp:501:10:uint32_t MAX30105::getIR()	16	static
+MAX30105.cpp:511:10:uint32_t MAX30105::getGreen()	16	static
+MAX30105.cpp:521:10:uint32_t MAX30105::getFIFORed()	16	static
+MAX30105.cpp:527:10:uint32_t MAX30105::getFIFOIR()	16	static
+MAX30105.cpp:533:10:uint32_t MAX30105::getFIFOGreen()	16	static
+MAX30105.cpp:539:6:void MAX30105::nextSample()	16	static
+MAX30105.cpp:552:10:uint16_t MAX30105::check()	72	dynamic
+MAX30105.cpp:685:6:bool MAX30105::safeCheck(uint8_t)	24	static
+MAX30105.cpp:701:6:void MAX30105::bitMask(uint8_t, uint8_t, uint8_t)	24	static
+MAX30105.cpp:716:9:uint8_t MAX30105::readRegister8(uint8_t, uint8_t)	40	static
+MAX30105.cpp:739:6:void MAX30105::readMult(uint8_t, uint8_t, uint8_t*, uint16_t)	40	static
+MAX30105.cpp:747:6:void MAX30105::writeRegister8(uint8_t, uint8_t, uint8_t)	32	static
+MAX30105.cpp:759:10:uint32_t MAX30105::millis()	16	static
+MAX30105.cpp:767:6:void MAX30105::delay(uint32_t)	16	static
