@@ -23,7 +23,6 @@ static  uint8_t  IP_Addr[4];
 static uint8_t  currentTemp = 0;
 static uint16_t currentDist = 0;
 
-char bufferBad[50] = {0};
 char bpmDisplay[50] = {0};
 
 // Damping factor for the webserver
@@ -90,10 +89,6 @@ int main(void)
   HAL_Init();
   SystemClock_Config();
 
-  /* USER CODE BEGIN SysInit */
-
-  /* USER CODE END SysInit */
-
   // Initialize other peripherals
   MX_GPIO_Init();
   MX_I2C1_Init();
@@ -111,8 +106,6 @@ int main(void)
    // Initializes the heart-rate sensor
    particleSensor.begin(&hi2c1, MAX30102_READ_ADDRESS);
    particleSensor.setup();
-
-    char bufferBad[50] = {0};
 
     serialPrint("****** WIFI Web Server Initialization ****** \n\r");
 
@@ -238,6 +231,7 @@ do
 	  // optical IR samples, which needs to happened very rapidly
 	  while (countTime < dampingFactor) {
 
+	  // Following code was taken from the library ported earlier
 	  long irValue = particleSensor.getIR();
 
 	  	  if (checkForBeat(irValue) == true)
@@ -250,8 +244,10 @@ do
 
 	  	    if (beatsPerMinute < 255 && beatsPerMinute > 20)
 	  	    {
-	  	      rates[rateSpot++] = (uint8_t)beatsPerMinute; //Store this reading in the array
-	  	      rateSpot %= RATE_SIZE; //Wrap variable
+	  	      //Store this reading in the array
+	  	      rates[rateSpot++] = (uint8_t)beatsPerMinute;
+	  	      //Wrap variable
+	  	      rateSpot %= RATE_SIZE;
 
 	  	      //Take average of readings
 	  	      beatAvg = 0;
