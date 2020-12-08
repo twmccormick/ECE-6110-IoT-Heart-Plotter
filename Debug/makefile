@@ -61,8 +61,8 @@ finalProject_heart.bin \
 all: finalProject_heart.elf secondary-outputs
 
 # Tool invocations
-finalProject_heart.elf: $(OBJS) $(USER_OBJS) C:\Users\tyler\Documents\testCUBE\finalProject_heart\finalProject_heart\STM32L475VGTX_FLASH.ld
-	arm-none-eabi-g++ -o "finalProject_heart.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\tyler\Documents\testCUBE\finalProject_heart\finalProject_heart\STM32L475VGTX_FLASH.ld" -Wl,-Map="finalProject_heart.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+finalProject_heart.elf: $(OBJS) $(USER_OBJS) C:\Users\tyler\Documents\Github\ Stuff\heartPlotter\ECE-6110-IoT-Heart-Plotter\STM32L475VGTX_FLASH.ld
+	arm-none-eabi-g++ -o "finalProject_heart.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\tyler\Documents\Github Stuff\heartPlotter\ECE-6110-IoT-Heart-Plotter\STM32L475VGTX_FLASH.ld" -Wl,-Map="finalProject_heart.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

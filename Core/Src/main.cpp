@@ -26,6 +26,9 @@ static uint16_t currentDist = 0;
 char bufferBad[50] = {0};
 char bpmDisplay[50] = {0};
 
+// Damping factor for the webserver
+int dampingFactor = 100;
+
 // This stores the portion of the javascript responsible for
 // holding the heart rate values. This needs to be separate so it
 // can be formatted using sprintf
@@ -233,7 +236,7 @@ do
 	  // This causes the webserver to check for connections
 	  // at a slower rate than normal, thus allowing more time for collecting
 	  // optical IR samples, which needs to happened very rapidly
-	  while (countTime < 100) {
+	  while (countTime < dampingFactor) {
 
 	  long irValue = particleSensor.getIR();
 
@@ -264,6 +267,19 @@ do
 	  	  if (irValue < 5000) {
 
 	  		  beatAvg = 0;
+
+	  	  }
+
+	  	  // Lol, of your heart-rate fits in this condition, sound an alarm
+	  	  if (((beatAvg < 40)||(beatAvg > 120)) && (beatAvg != 0)) {
+
+	  		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_SET);
+
+	  	  }
+
+	  	  else {
+
+	  		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_RESET);
 
 	  	  }
 
