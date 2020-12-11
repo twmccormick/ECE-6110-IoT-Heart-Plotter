@@ -251,6 +251,8 @@ do
 	  while (countTime < dampingFactor) {
 
 	  // Following code was taken from the library ported earlier
+	  //
+	  // See reference #4 on the paper
 	  long irValue = particleSensor.getIR();
 
 	  	  if (checkForBeat(irValue) == true)
